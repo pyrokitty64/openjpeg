@@ -38,11 +38,19 @@ interface DecodedOpenJPEG {
     resolutionAtLevel:number,
 }
 
+interface EncodeOptions {
+    lossless?: boolean;
+    compressionRatio?: number;
+    decompositions?: number;
+    progressionOrder?: number;
+}
+
 export type {
     DecodedOpenJPEG,
     OpenJPEGDimension,
     OpenJPEGOffset,
     DecodeOptions,
+    EncodeOptions,
     FrameInfo,
 }
   

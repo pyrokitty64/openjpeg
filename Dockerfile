@@ -9,19 +9,9 @@ ARG USERNAME=dev
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
 
-# Configure apt and install packages
+# Install build tools (nvm not needed for WASM build)
 RUN apt-get update \
-    #
-    # Install nvm 
-    && su - $USERNAME -c "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash" \
-    #
-    # Install C++ tools
     && apt-get -y install build-essential \
-    #
-    # version 3.17 of cmake
-    #& wget -qO- "https://cmake.org/files/v3.17/cmake-3.17.0-Linux-x86_64.tar.gz" | tar --strip-components=1 -xz -C /usr/local\
-    #
-    # Clean up
     && apt-get autoremove -y \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*

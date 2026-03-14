@@ -19,13 +19,12 @@
       LINK_FLAGS "\
         --bind \
         --allowJs \
-        --emit-tsd interface.d.ts \
-        -s DISABLE_EXCEPTION_CATCHING=1 \
+        -s DISABLE_EXCEPTION_CATCHING=0 \
         -s ASSERTIONS=0 \
         -s NO_EXIT_RUNTIME=1 \
         -s MALLOC=emmalloc \
         -s ALLOW_MEMORY_GROWTH=1 \
-        -s TOTAL_MEMORY=50mb \
+        -s TOTAL_MEMORY=16mb \
         -s FILESYSTEM=0 \
         -s EXPORTED_FUNCTIONS=[] \
         -s EXPORTED_RUNTIME_METHODS=[ccall] \

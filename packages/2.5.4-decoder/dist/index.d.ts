@@ -33,10 +33,18 @@ interface DecodedOpenJPEG {
     tileOffset: OpenJPEGOffset;
     resolutionAtLevel: number;
 }
+interface EncodeOptions {
+    lossless?: boolean;
+    compressionRatio?: number;
+    decompositions?: number;
+    progressionOrder?: number;
+}
 
 declare function decode(imageBuffer: ArrayBuffer, options?: DecodeOptions): Promise<DecodedOpenJPEG>;
+declare function encode(pixelData: Uint8Array, frameInfo: FrameInfo, options?: EncodeOptions): Promise<Uint8Array>;
 declare const _default: {
     decode: typeof decode;
+    encode: typeof encode;
     OpenJPEGWASM: any;
 };
 

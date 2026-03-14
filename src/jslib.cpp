@@ -67,23 +67,22 @@ EMSCRIPTEN_BINDINGS(J2KDecoder) {
 }
 
 
-// EMSCRIPTEN_BINDINGS(J2KEncoder) {
-//   class_<J2KEncoder>("J2KEncoder")
-//     .constructor<>()
-//     .function("getDecodedBuffer", &J2KEncoder::getDecodedBuffer)
-//     .function("getEncodedBuffer", &J2KEncoder::getEncodedBuffer)
-//     .function("encode", &J2KEncoder::encode)
-//     .function("setDecompositions", &J2KEncoder::setDecompositions)
-//     .function("setQuality", &J2KEncoder::setQuality)
-//     .function("setProgressionOrder", &J2KEncoder::setProgressionOrder)
-//     .function("setDownSample", &J2KEncoder::setDownSample)
-//     .function("setImageOffset", &J2KEncoder::setImageOffset)
-//     .function("setTileSize", &J2KEncoder::setTileSize)
-//     .function("setTileOffset", &J2KEncoder::setTileOffset)
-//     .function("setBlockDimensions", &J2KEncoder::setBlockDimensions)
-//     .function("setNumPrecincts", &J2KEncoder::setNumPrecincts)
-//     .function("setPrecinct", &J2KEncoder::setPrecinct)
-//     .function("setCompressionRatio", &J2KEncoder::setCompressionRatio)
-    
-//    ;
-// }
+EMSCRIPTEN_BINDINGS(J2KEncoder) {
+  class_<J2KEncoder>("J2KEncoder")
+    .constructor<>()
+    .function("getDecodedBuffer", &J2KEncoder::getDecodedBuffer)
+    .function("getEncodedBuffer", &J2KEncoder::getEncodedBuffer)
+    .function("encode", &J2KEncoder::encode)
+    .function("setDecompositions", &J2KEncoder::setDecompositions)
+    .function("setQuality", &J2KEncoder::setQuality)
+    .function("setProgressionOrder", &J2KEncoder::setProgressionOrder)
+    .function("setDownSample", &J2KEncoder::setDownSample)
+    .function("setImageOffset", &J2KEncoder::setImageOffset)
+    .function("setTileSize", &J2KEncoder::setTileSize)
+    .function("setTileOffset", &J2KEncoder::setTileOffset)
+    .function("setBlockDimensions", &J2KEncoder::setBlockDimensions)
+    .function("setNumPrecincts", &J2KEncoder::setNumPrecincts)
+    .function("setPrecinct", &J2KEncoder::setPrecinct)
+    .function("setCompressionRatio", &J2KEncoder::setCompressionRatio)
+   ;
+}
